@@ -25,11 +25,11 @@
      </div>
      <div class="row">
   		<div class="col-2">
-        <h3>NYC Traffic</h3>
+        <h3 id='imgTrigger1'>NYC Traffic</h3>
         <br>
-        <p id="description1">This is what traffic in New York City looks like on a normal weekday.</p>
+        <p>This is what traffic in New York City looks like on a normal weekday.</p>
         <br>
-        <p>What would happen if we added some bike stations?</p>
+        <p id="description1">What would happen if we added some bike stations?</p>
         <p>How would traffic change?</p>
         <p>Let's find out.</p>
       </div>
@@ -37,22 +37,22 @@
         <div id="trafficMapDiv"></div>
       </div>
       <div class="col-2">
-        <h3>Before station</h3>
+        <h3 id='imgTrigger2'>Before station</h3>
         <br>
-        <p id="description2">Traffic at an intersection</p>
+        <p>Traffic at an intersection</p>
         <br>
-        <p>This is the traffic before a bike sharing station was added.</p>
+        <p id="description2">This is the traffic before a bike sharing station was added.</p>
         <p>Let's see what happens after we add a station.</p>
       </div>
       <div class="col-10">
         <div id="stationBeforeDiv"></div>
       </div>
       <div class="col-2">
-        <h3>After station</h3>
+        <h3 id='imgTrigger3'>After station</h3>
         <br>
-        <p id="description3">Traffic at an intersection</p>
+        <p>Traffic at an intersection</p>
         <br>
-        <p>This is the traffic after a bike sharing station was added.</p>
+        <p id="description3">This is the traffic after a bike sharing station was added.</p>
         <p>There is now less car traffic!</p>
       </div>
       <div class="col-10">
@@ -73,6 +73,7 @@ var myimage = svg.append('image')
     .attr('xlink:href', 'nyc_map.png')
     .attr('width', 1350)
     .attr('height', 1000)
+    .attr("class", "img1opacity")
 
 svg.append("text")
     .attr("x", 40)
@@ -97,6 +98,7 @@ var myimage = svg.append('image')
     .attr('xlink:href', 'nyc_map.png')
     .attr('width', 1350)
     .attr('height', 1000)
+    .attr("class", "img2opacity")
 
 svg.append("text")
     .attr("x", 40)
@@ -122,6 +124,7 @@ var myimage = svg.append('image')
     .attr('xlink:href', 'nyc_map.png')
     .attr('width', 1350)
     .attr('height', 1000)
+    .attr("class", "img3opacity")
 
 svg.append("text")
     .attr("x", 40)
@@ -144,12 +147,24 @@ svg.append("text")
       .setClassToggle(".text1opacity", "active")
       .addTo(controller);
 
+  new ScrollMagic.Scene({triggerElement: "#imgTrigger1"})
+      .setClassToggle(".img1opacity", "active")
+      .addTo(controller);
+
   new ScrollMagic.Scene({triggerElement: "#description2"})
       .setClassToggle(".text2opacity", "active")
       .addTo(controller);
 
+  new ScrollMagic.Scene({triggerElement: "#imgTrigger2"})
+      .setClassToggle(".img2opacity", "active")
+      .addTo(controller);
+
   new ScrollMagic.Scene({triggerElement: "#description3"})
       .setClassToggle(".text3opacity", "active")
+      .addTo(controller);
+
+  new ScrollMagic.Scene({triggerElement: "#imgTrigger3"})
+      .setClassToggle(".img3opacity", "active")
       .addTo(controller);
 
 </script>
