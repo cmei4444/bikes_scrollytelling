@@ -38,7 +38,7 @@ img {
 
 .text1opacity, .text2opacity, .text3opacity {
   font-size:40px;
-  fill:blue;
+  fill:black;
   /* background-color: white; */
   opacity:0;
   transition: opacity 0.8s;

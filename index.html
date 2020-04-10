@@ -75,6 +75,28 @@ var myimage = svg.append('image')
     .attr('height', 1000)
     .attr("class", "img1opacity")
 
+    var rectangles = [[0, 0, 1350, 100, "#c9e897"], [0, 750, 1350, 100, "#c9e897"]];
+
+          svg.selectAll("rect")
+             .data(rectangles)
+             .enter()
+             .append("rect")
+             .attr("stroke", "black")
+             .attr("stroke-width", 1)
+             .attr("x", function(d) {
+                return d[0];})
+             .attr("y", function(d) {
+                return d[1];})
+             .attr("width", function(d) {
+                return d[2];})
+             .attr("height", function(d) {
+                return d[3];})
+             .attr("fill", function(d) {
+                if (d[4]== "gray")
+                  return "gray";
+                else
+                  return "#c9e897";})
+
 svg.append("text")
     .attr("x", 40)
     .attr("y", 70)
@@ -99,6 +121,28 @@ var myimage = svg.append('image')
     .attr('width', 1350)
     .attr('height', 1000)
     .attr("class", "img2opacity")
+
+    var rectangles = [[0, 0, 1350, 100, "#c9e897"], [0, 750, 1350, 100, "#c9e897"]];
+
+    			svg.selectAll("rect")
+    			   .data(rectangles)
+    			   .enter()
+    			   .append("rect")
+    			   .attr("stroke", "black")
+    			   .attr("stroke-width", 1)
+    			   .attr("x", function(d) {
+    			   		return d[0];})
+    			   .attr("y", function(d) {
+    			   		return d[1];})
+    			   .attr("width", function(d) {
+    			   		return d[2];})
+    			   .attr("height", function(d) {
+    			   		return d[3];})
+    			   .attr("fill", function(d) {
+    			   		if (d[4]== "gray")
+    			   			return "gray";
+    			   		else
+    			   			return "#c9e897";})
 
 svg.append("text")
     .attr("x", 40)
@@ -125,6 +169,28 @@ var myimage = svg.append('image')
     .attr('width', 1350)
     .attr('height', 1000)
     .attr("class", "img3opacity")
+
+    var rectangles = [[0, 0, 1350, 100, "#c9e897"], [0, 750, 1350, 100, "#c9e897"]];
+
+          svg.selectAll("rect")
+             .data(rectangles)
+             .enter()
+             .append("rect")
+             .attr("stroke", "black")
+             .attr("stroke-width", 1)
+             .attr("x", function(d) {
+                return d[0];})
+             .attr("y", function(d) {
+                return d[1];})
+             .attr("width", function(d) {
+                return d[2];})
+             .attr("height", function(d) {
+                return d[3];})
+             .attr("fill", function(d) {
+                if (d[4]== "gray")
+                  return "gray";
+                else
+                  return "#c9e897";})
 
 svg.append("text")
     .attr("x", 40)
